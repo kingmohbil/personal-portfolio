@@ -1,41 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poiret+One&display=swap');
 :root {
   --dark-gold-rose: #643b47;
   --light-silver: #b9b9b9;
+  --light-green: #7fd1ae;
   --poiret: 'Poiret One', cursive;
+  --libre: 'Libre Baskerville', serif;
 }
+
+#m-style {
+  color: var(--light-green);
+  font-family: var(--libre);
+}
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 3rem;
-  transform-origin: 0% 0%;
   transition: transform, 2s, ease-out, 1s;
 }
 
-.nav-link > a {
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
   text-decoration: none;
   color: inherit;
   font-family: var(--poiret);
   font-weight: 700;
   font-size: 24px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .nav-link {
-  cursor: pointer;
   transition: background-color, 2s, ease-out, 1s;
   transition: color, 2s, ease-out, 1s;
+  border-radius: 12px;
   padding: 12px;
 }
 .nav-link:hover {
-  background-color: white;
+  background-color: var(--light-silver);
   color: black;
+  border-radius: 12px;
 }
 
+/* ------------------------------ mobile navbar ------------------------------ */
+
 #arrow-btn {
-  border: none;
   background: transparent;
-  cursor: pointer;
 }
 
 .arrow {
