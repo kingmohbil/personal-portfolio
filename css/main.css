@@ -1,0 +1,136 @@
+:root {
+  --dark-gold-rose: #643b47;
+  --light-silver: #b9b9b9;
+  --light-green: #7fd1ae;
+  --poiret: 'Poiret One', cursive;
+}
+@font-face {
+  font-family: Coco;
+  src: url('../fonts/CocoBiker\ Regular\ Trial.ttf');
+}
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: url('../images/dark-background-1920w.webp') no-repeat center
+    center fixed;
+  font-family: var(--poiret), 'Times new Roman';
+}
+body {
+  color: var(--light-silver);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#m-style {
+  color: var(--light-green);
+  font-family: Coco;
+}
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  z-index: 10;
+}
+
+.title > h1::selection,
+.title > h2::selection,
+.title > h3::selection,
+#m-style::selection,
+.navbar-header > h1::selection,
+.nav-link > a::selection {
+  text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 0.42);
+}
+
+.title > h1,
+.title > h2,
+.title > h3 {
+  margin: 0;
+  font-size: 7vw;
+  text-align: center;
+}
+.title > h2 {
+  font-size: 6vw;
+}
+.title > h3 {
+  font-size: 5vw;
+}
+.personal-photo {
+  z-index: 1;
+  object-fit: contain;
+  user-select: none;
+  filter: brightness(75%);
+}
+
+@media (max-width: 480px) {
+  html {
+    background: url('../images/dark-background-480w.webp') no-repeat cover cover
+      fixed;
+  }
+  main {
+    position: relative;
+  }
+  nav {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .navbar-header {
+    display: flex;
+  }
+  .nav-links {
+    height: 0;
+    transform: scaleY(0);
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .content-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+  }
+  .nav-links.active {
+    height: auto;
+    display: flex;
+    transform: scaleY(1);
+  }
+
+  .navbar-icon {
+    display: block;
+  }
+  .title {
+    margin-top: 10%;
+  }
+  .title > h1,
+  .title > h2,
+  .title > h3 {
+    font-size: 14vw;
+  }
+}
