@@ -1,13 +1,3 @@
-:root {
-  --dark-gold-rose: #643b47;
-  --light-silver: #b9b9b9;
-  --light-green: #7fd1ae;
-  --poiret: 'Poiret One', cursive;
-}
-@font-face {
-  font-family: Coco;
-  src: url('../fonts/CocoBiker\ Regular\ Trial.ttf');
-}
 html {
   margin: 0;
   padding: 0;
@@ -18,82 +8,94 @@ html {
     center fixed;
   font-family: var(--poiret), 'Times new Roman';
 }
+
 body {
+  margin: 0;
   color: var(--light-silver);
   min-height: 100%;
+}
+
+section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-nav {
-  position: sticky;
+.first-section {
+  justify-content: center;
+}
+.main-nav {
+  position: fixed;
+  min-height: auto;
+  z-index: 10;
+  top: 0;
+  min-width: calc(100% - 10rem);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 5rem;
 }
 
-.navbar-header {
+.personal-info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  padding: 0 10vw;
 }
 
-main {
-  display: flex;
-  flex-grow: 1;
+.second-section {
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
+  padding: 0 15vw;
 }
-#m-style {
+
+/* ------------------------- Animation for the title ------------------------ */
+
+.introduction,
+.greeting {
+  opacity: 0;
+  filter: blur(5px);
+  font-size: 3vw;
+  user-select: none;
+  transition: text-shadow, 2s, ease-out, 1s;
+  transition: all 2s;
+  animation: introAnimation 1s ease-out 1s 1 forwards;
+}
+.introduction {
+  transform: translateX(-100%);
+}
+.greeting {
+  transform: translateX(100%);
   color: var(--light-green);
-  font-family: Coco;
-}
-.content-wrapper {
-  display: flex;
-  justify-content: center;
+  font-size: 2vw;
 }
 
-.title {
-  position: absolute;
-  z-index: 10;
+@keyframes introAnimation {
+  to {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.title > h1::selection,
-.title > h2::selection,
-.title > h3::selection,
+/* ---------------------------- end of Animation ---------------------------- */
+
+.greeting:hover,
+.introduction:hover,
 #m-style::selection,
-.navbar-header > h1::selection,
-.nav-link > a::selection {
+.navbar-header > h1::selection {
   text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 0.42);
 }
 
-.title > h1,
-.title > h2,
-.title > h3 {
-  margin: 0;
-  font-size: 7vw;
-  text-align: center;
-}
-.title > h2 {
-  font-size: 6vw;
-}
-.title > h3 {
-  font-size: 5vw;
-}
 .personal-photo {
-  z-index: 1;
-  object-fit: contain;
   user-select: none;
-  filter: brightness(75%);
+  filter: brightness(50%);
 }
 
 @media (max-width: 480px) {
   html {
     background: url('../images/dark-background-480w.webp') no-repeat cover cover
       fixed;
-  }
-  main {
-    position: relative;
   }
   nav {
     flex-direction: column;
@@ -111,11 +113,6 @@ main {
     padding: 0;
   }
 
-  .content-wrapper {
-    position: absolute;
-    width: 100%;
-    top: 10%;
-  }
   .nav-links.active {
     height: auto;
     display: flex;
@@ -124,13 +121,5 @@ main {
 
   .navbar-icon {
     display: block;
-  }
-  .title {
-    margin-top: 10%;
-  }
-  .title > h1,
-  .title > h2,
-  .title > h3 {
-    font-size: 14vw;
   }
 }
