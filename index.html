@@ -5,6 +5,299 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <script src="./main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <section class="section first-section">
+      <header class="main-header">
+        <nav class="main-nav" aria-label="main navigation bar">
+          <div class="navbar-header">
+            <h1><span id="m-style">M</span>ohammad Alwazzan</h1>
+            <div class="navbar-icon">
+              <button id="arrow-btn">
+                <img
+                  src="./images/down-chevron.png"
+                  alt="down arrow"
+                  class="arrow"
+                />
+              </button>
+            </div>
+          </div>
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a class="link" href="#my-work" aria-label="My work">My work</a>
+            </li>
+            <li class="nav-link">
+              <a class="link" href="#" aria-label="About me">About me</a>
+            </li>
+            <li class="nav-link">
+              <a class="link" href="#" aria-label="Contact me">Contact me</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main aria-label="introduction about the author">
+        <div class="personal-info">
+          <div>
+            <h1 class="title greeting">Hello world !, I'm Mohammad Alwazzan</h1>
+            <h1 class="title introduction">I'm a Full Stack Web Developer</h1>
+          </div>
+          <div class="personal-photo">
+            <img
+              src="./images/personal-photo 290w.jpg"
+              srcset="
+                ./images/personal-photo-290w.jpg 290w,
+                ./images/personal-photo-480w.jpg 480w
+              "
+              sizes="(max-width: 480px) 290px,
+                      480px"
+              alt="personal photo"
+              aria-label="navbar toggler"
+            />
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="section second-section">
+      <main aria-label="my work section" id="my-work">
+        <h1 class="cards-container-title">My Work</h1>
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="./images/first-project.png"
+                width="360px"
+                alt="screenshot of project"
+              />
+            </div>
+            <div class="card-header">
+              <h2 class="card-title">Thats a text</h2>
+              <div class="card-links">
+                <ul class="card-links">
+                  <li class="card-link">
+                    <a class="link" href="https://github.com/" target="_blank"
+                      ><i class="devicon-github-original colored"></i
+                    ></a>
+                  </li>
+                  <li class="card-link">
+                    <a href="https://" target="_blank">
+                      <img
+                        src="./images/open-in-new.png"
+                        alt=""
+                        width="24px"
+                        height="28px"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-description">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="./images/first-project.png"
+                width="360px"
+                alt="screenshot of project"
+              />
+            </div>
+            <div class="card-header">
+              <h2 class="card-title">Thats a text</h2>
+              <div class="card-links">
+                <ul class="card-links">
+                  <li class="card-link">
+                    <a class="link" href="https://github.com/" target="_blank"
+                      ><i class="devicon-github-original colored"></i
+                    ></a>
+                  </li>
+                  <li class="card-link">
+                    <a href="https://" target="_blank">
+                      <img
+                        src="./images/open-in-new.png"
+                        alt=""
+                        width="24px"
+                        height="28px"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-description">
+              <p class="card-text">Lorem ipsum dolor sit amet,</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="./images/inventory-project.png"
+                width="360px"
+                alt="screenshot of project"
+              />
+            </div>
+            <div class="card-header">
+              <h2 class="card-title">Products Inventory</h2>
+              <div class="card-links">
+                <ul class="card-links">
+                  <li class="card-link">
+                    <a
+                      class="link"
+                      href="https://github.com/kingmohbil/inventory"
+                      target="_blank"
+                      ><i class="devicon-github-original colored"></i
+                    ></a>
+                  </li>
+                  <li class="card-link">
+                    <a
+                      href="https://inventory-production-64ad.up.railway.app/"
+                      target="_blank"
+                    >
+                      <img
+                        src="./images/open-in-new.png"
+                        alt=""
+                        width="24px"
+                        height="28px"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-description">
+              <p class="card-text">
+                This is a Product inventory store created using express and
+                mongodb.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="./images/first-project.png"
+                width="360px"
+                alt="screenshot of project"
+              />
+            </div>
+            <div class="card-header">
+              <h2 class="card-title">Thats a text</h2>
+              <div class="card-links">
+                <ul class="card-links">
+                  <li class="card-link">
+                    <a class="link" href="https://github.com/" target="_blank"
+                      ><i class="devicon-github-original colored"></i
+                    ></a>
+                  </li>
+                  <li class="card-link">
+                    <a href="https://" target="_blank">
+                      <img
+                        src="./images/open-in-new.png"
+                        alt=""
+                        width="24px"
+                        height="28px"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-description">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="./images/first-project.png"
+                width="360px"
+                alt="screenshot of project"
+              />
+            </div>
+            <div class="card-header">
+              <h2 class="card-title">Thats a text</h2>
+              <div class="card-links">
+                <ul class="card-links">
+                  <li class="card-link">
+                    <a class="link" href="https://github.com/" target="_blank"
+                      ><i class="devicon-github-original colored"></i
+                    ></a>
+                  </li>
+                  <li class="card-link">
+                    <a href="https://" target="_blank">
+                      <img
+                        src="./images/open-in-new.png"
+                        alt=""
+                        width="24px"
+                        height="28px"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-description">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="./images/cv-project.png"
+                width="360px"
+                alt="screenshot of project"
+              />
+            </div>
+            <div class="card-header">
+              <h2 class="card-title">CV generator</h2>
+              <div class="card-links">
+                <ul class="card-links">
+                  <li class="card-link">
+                    <a
+                      class="link"
+                      href="https://github.com/kingmohbil/react-cv-project"
+                      target="_blank"
+                      ><i class="devicon-github-original colored"></i
+                    ></a>
+                  </li>
+                  <li class="card-link">
+                    <a
+                      href="https://kingmohbil.github.io/react-cv-project/"
+                      target="_blank"
+                    >
+                      <img
+                        src="./images/open-in-new.png"
+                        alt=""
+                        width="24px"
+                        height="28px"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-description">
+              <p class="card-text">
+                This is a CV generator created using react js library.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
 </html>
