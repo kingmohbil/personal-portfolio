@@ -1,0 +1,50 @@
+.card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+.cards-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+.cards-container-title {
+  text-align: center;
+}
+.card-header,
+.card-description {
+  background: var(--light-silver);
+  color: black;
+  padding: 0 12px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.card-description {
+  flex-grow: 1;
+}
