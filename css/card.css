@@ -20,7 +20,7 @@
   font-weight: bold;
 }
 .cards-container-title {
-  text-align: center;
+  align-self: start;
 }
 .card-header,
 .card-description {
