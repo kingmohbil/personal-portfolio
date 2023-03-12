@@ -54,9 +54,7 @@ section {
 .personal-info {
   padding: 0 10vw;
 }
-.contact-info {
-  align-self: flex-start;
-}
+
 #contact-me {
   flex-grow: 1;
   display: flex;
@@ -85,11 +83,25 @@ p {
 }
 .personal-links {
   display: flex;
+  font-size: 32px;
   gap: 16px;
 }
 .personal-link {
   text-decoration: none;
   color: var(--light-green);
+}
+.phone-link,
+.email-link {
+  display: flex;
+  text-decoration: none;
+  gap: 16px;
+  color: var(--light-silver);
+  transition: all 1s;
+}
+
+.phone-link > p:hover,
+.email-link > p:hover {
+  text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 0.42);
 }
 /* ------------------------- Animation for the title ------------------------ */
 

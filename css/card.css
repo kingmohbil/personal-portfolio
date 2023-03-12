@@ -48,3 +48,9 @@
 .card-description {
   flex-grow: 1;
 }
+i:hover {
+  text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 0.42);
+}
+.icon:hover {
+  filter: drop-shadow(0 0 6px rgba(206, 201, 201, 0.42));
+}
