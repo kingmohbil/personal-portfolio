@@ -107,46 +107,38 @@ p {
 }
 /* ------------------------- Animation for the title ------------------------ */
 
-.introduction,
-.greeting {
+.introduction.hidden,
+.greeting.hidden {
   opacity: 0;
   filter: blur(5px);
   font-size: 3vw;
   user-select: none;
-  transition: all 2s;
-  animation: introAnimation 1s ease-out 2s 1 forwards,
-    lightAnimation 3s ease-out 2s 1;
+  transition: all 1s;
 }
-.introduction {
+.introduction.hidden {
+  transform-origin: center left;
   transform: translateX(-100%);
 }
-.greeting {
+.greeting.hidden {
+  transform-origin: center right;
   transform: translateX(100%);
   color: var(--light-green);
   font-size: 2vw;
 }
-
-@keyframes introAnimation {
-  to {
-    filter: blur(0);
+.introduction.show,
+.greeting.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion) {
+  .hidden {
     opacity: 1;
     transform: translateX(0);
+    filter: blur(0);
+    transition: none;
   }
 }
-@keyframes lightAnimation {
-  0% {
-    text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 0.42);
-  }
-
-  30% {
-    text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 0.7);
-  }
-
-  100% {
-    text-shadow: 0 0 6px #cec9c9, 0 0 20px rgba(206, 201, 201, 1);
-  }
-}
-
 /* ---------------------------- end of Animation ---------------------------- */
 
 .greeting:hover,
