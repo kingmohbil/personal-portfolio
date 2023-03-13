@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poiret+One&display=swap');
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 :root {
   --dark-gold-rose: #643b47;
@@ -20,7 +20,6 @@
   list-style: none;
   display: flex;
   gap: 3rem;
-  transition: transform, 2s, ease-out, 1s;
 }
 
 .navbar-header {

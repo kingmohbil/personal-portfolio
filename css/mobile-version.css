@@ -1,55 +1,56 @@
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
   html {
-    background: url('../images/dark-background-480w.webp') no-repeat cover cover
-      fixed;
-  }
-
-  .second-section {
-    padding: 0;
-    width: 100%;
-  }
-  .main-header,
-  .main-nav,
-  .nav-links,
-  .cards-container {
-    max-width: 100%;
-  }
-  header {
-    position: static;
-  }
-  #my-work {
-    min-width: 100%;
-    max-width: 100%;
+    background-image: url('../images/dark-background-480w.webp');
   }
   .main-nav {
-    position: fixed;
-    top: 0;
-    left: 12px;
-    right: -12px;
-    padding: 0;
-    display: flex;
+    position: static;
     flex-direction: column;
+    padding: 0;
   }
   .navbar-header {
     min-width: 100%;
-    justify-content: space-between;
-  }
-  .navbar-icon {
-    display: block;
+    padding: 0 12px;
   }
   .nav-links {
-    display: flex;
+    max-width: 100%;
     flex-direction: column;
+    padding: 0;
+    transform-origin: top;
+    height: 0;
+    transform: scaleY(0);
+    transition: transform, 2s, ease-out, 1s;
   }
+  .nav-links.active {
+    height: auto;
+    transform: scaleY(1);
+  }
+  .navbar-icon {
+    display: flex;
+  }
+
   .personal-info {
     flex-direction: column;
   }
-
-  .card {
-    max-width: 320px;
+  .personal-description {
+    order: 2;
   }
-
+  .greeting,
+  .introduction {
+    font-size: 24px;
+  }
+  .personal-photo {
+    order: 1;
+  }
+  #about-me {
+    padding: 0 10vw;
+  }
   #contact-me {
     flex-direction: column;
+  }
+  .contact-info {
+    order: 2;
+  }
+  .contact-photo {
+    order: 1;
   }
 }
