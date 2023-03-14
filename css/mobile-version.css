@@ -2,14 +2,22 @@
   html {
     background-image: url('../images/dark-background-480w.webp');
   }
+  .main-header {
+    position: relative;
+  }
   .main-nav {
-    position: static;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     flex-direction: column;
     padding: 0;
+    min-width: 100vw;
+    max-width: 100vw;
   }
   .navbar-header {
+    padding: 0 10vw;
     min-width: 100%;
-    padding: 0 12px;
   }
   .nav-links {
     max-width: 100%;
@@ -30,13 +38,16 @@
 
   .personal-info {
     flex-direction: column;
+    padding: 0;
   }
   .personal-description {
     order: 2;
   }
-  .greeting,
+  .greeting {
+    font-size: 16px !important;
+  }
   .introduction {
-    font-size: 24px;
+    font-size: 18px !important;
   }
   .personal-photo {
     order: 1;
