@@ -54,6 +54,7 @@
 }
 
 #arrow-btn {
+  cursor: pointer;
   background: transparent;
   border: none;
 }
