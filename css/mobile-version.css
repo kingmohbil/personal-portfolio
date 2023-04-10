@@ -2,6 +2,7 @@
   html {
     background-image: url('../images/dark-background-480w.webp');
   }
+
   .main-header {
     position: relative;
   }
@@ -44,10 +45,12 @@
     order: 2;
   }
   .greeting {
-    font-size: 16px !important;
+    font-size: 24px !important;
+    text-align: center;
   }
   .introduction {
-    font-size: 18px !important;
+    font-size: 24px !important;
+    text-align: center;
   }
   .personal-photo {
     order: 1;
