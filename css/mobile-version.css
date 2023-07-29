@@ -30,6 +30,7 @@
     transition: transform, 2s, ease-out, 1s;
   }
   .nav-links.active {
+    position: static;
     height: auto;
     transform: scaleY(1);
   }
@@ -66,5 +67,13 @@
   }
   .contact-photo {
     order: 1;
+  }
+
+  #arrow-btn {
+    transition: transform 1s ease;
+  }
+
+  #arrow-btn.active {
+    transform: rotate(180deg);
   }
 }
